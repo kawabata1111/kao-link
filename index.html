@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#E67E22" />
+    <title>株式会社KAO LINK | 暮らしをつなぐ、笑顔をつなぐ</title>
+    <meta name="description" content="電気・ガス・通信のコスト削減で、お客様の暮らしをサポートする株式会社KAO LINKの公式サイトです。" />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Noto Sans JP"', 'sans-serif'],
+              english: ['"Montserrat"', 'sans-serif'],
+            },
+            colors: {
+              brand: {
+                primary: '#E67E22',
+                dark: '#D35400',
+                light: '#F39C12',
+                secondary: '#2C3E50',
+                accent: '#F1C40F',
+                bgLight: '#F8F9FA',
+              }
+            },
+            backgroundImage: {
+              'gradient-primary': 'linear-gradient(135deg, #F39C12 0%, #E67E22 50%, #D35400 100%)',
+              'gradient-hero': 'linear-gradient(135deg, rgba(230,126,34,0.9) 0%, rgba(211,84,0,0.95) 100%)',
+            },
+            animation: {
+              'float': 'float 6s ease-in-out infinite',
+              'float-delayed': 'float 6s ease-in-out 3s infinite',
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'bounce-slow': 'bounce 3s infinite',
+              'ripple': 'ripple 1s linear infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-20px)' },
+              },
+              ripple: {
+                '0%': { transform: 'scale(0.8)', opacity: '1' },
+                '100%': { transform: 'scale(2)', opacity: '0' },
+              }
+            },
+            boxShadow: {
+              'glow': '0 10px 40px rgba(230,126,34,0.3)',
+              'card': '0 20px 60px rgba(0,0,0,0.1)',
+            },
+            cursor: {
+              'none': 'none',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        font-family: 'Noto Sans JP', sans-serif;
+        cursor: none; /* Hide default cursor */
+      }
+      a, button, input, textarea, select {
+        cursor: none; /* Ensure interactive elements also hide cursor */
+      }
+      
+      .font-english {
+        font-family: 'Montserrat', sans-serif;
+      }
+      
+      /* Smooth scrolling */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Scrollbar */
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #E67E22;
+        border-radius: 5px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #D35400;
+      }
+
+      /* Utility classes for animations managed by JS */
+      .reveal {
+        opacity: 0;
+        transition: all 1s cubic-bezier(0.5, 0, 0, 1);
+      }
+      .reveal.active {
+        opacity: 1;
+      }
+      
+      .fade-up { transform: translateY(30px); }
+      .fade-up.active { transform: translateY(0); }
+      
+      .slide-left { transform: translateX(-50px); }
+      .slide-left.active { transform: translateX(0); }
+      
+      .slide-right { transform: translateX(50px); }
+      .slide-right.active { transform: translateX(0); }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3"
+  }
+}
+</script>
+</head>
+  <body class="bg-brand-bgLight text-gray-800 antialiased overflow-x-hidden">
+    <div id="root"></div>
+  </body>
+</html>
